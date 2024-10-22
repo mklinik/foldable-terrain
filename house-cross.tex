@@ -3,8 +3,8 @@
 \usepackage{tikz}
 \usepackage{tikzfill}
 
-\newcommand\wallHeight{6.35cm}
-\newcommand\coverHeight{1.27cm}
+\newcommand\wallHeight{5.62cm}
+\newcommand\coverHeight{2.00cm}
 \newcommand\buildingHeight{7.62cm} % must be wallHeight + coverHeight, and I want it to be 3in = 7.62cm
 \newcommand\buildingWidth{17.9cm}
 \newcommand\buildingDepth{10cm}
@@ -63,7 +63,7 @@
 
 %%%%% Stabilizing Cross
 
-\begin{scope}[yshift=-0cm]
+\begin{scope}[yshift=0.5cm]
 \draw (0, 0)
   rectangle ++(\buildingWidth - \innerEps,-\wallHeight)
   ;
@@ -72,7 +72,7 @@
 \vflap{\buildingWidth - \innerEps}{0}{\wallHeight}{\norm}
 \end{scope}
 
-\begin{scope}[yshift=-0.5cm, xshift=27cm, rotate=-90]
+\begin{scope}[yshift=-0.5cm, xshift=27.5cm, rotate=-90]
 \draw (0, 0)
   rectangle ++(\buildingDepth - \innerEps,-\wallHeight)
   ;
@@ -84,7 +84,7 @@
 
 %%%%% Roof
 
-\begin{scope}[yshift=-\buildingHeight + 0.8cm,xshift=-0.5cm]
+\begin{scope}[yshift=-\buildingHeight + 2.0cm,xshift=-0.5cm]
 \path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (\coverHeight,0)
   rectangle ++(\buildingWidth - \innerEps,-\coverHeight)
   rectangle ++(-\buildingWidth + \innerEps,-\buildingDepth + \innerEps)
