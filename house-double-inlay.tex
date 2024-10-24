@@ -26,6 +26,8 @@
 \begin{document}
 \pagestyle{empty}
 
+%%%%% Walls
+
 \begin{tikzpicture}
   [ remember picture
   , overlay
@@ -34,9 +36,8 @@
 
 \begin{scope}[yshift=-\coverHeight]
 \vflap{0}{0}{\buildingHeight}{\flip}
-%\path[draw,fill tile image*={width=2.7in}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/Concrete041B_1K-JPG_Color.jpg}] (0,0)
-\path[draw,fill tile image*={width=2.7in}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
-
+%\path[draw,fill tile image*={width=2.7in}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
+\draw (0,0)
   rectangle ++(\buildingWidth,-\buildingHeight)
   rectangle ++(\buildingDepth,\buildingHeight)
   ;
@@ -71,6 +72,7 @@
   , line width=0.02cm
   ]
 
+%%% First insert
 
 \begin{scope}[yshift=0cm]
 %\path[draw,fill tile image*={height=3in}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (0,0)
@@ -83,23 +85,38 @@
 \vflap{0}{0}{\buildingWidth + \innerEps}{\flip}
 \end{scope}
 
-%\begin{scope}[xshift=12cm]
-%\path[draw,fill tile image*={height=3in}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (0,0)
-  %rectangle ++(\wallHeight - \innerEps,-\buildingWidth + \innerEps)
-  %rectangle ++(\buildingDepth - \innerEps,\buildingWidth - \innerEps)
-  %;
-%\vflap{0}{0}{\buildingWidth + \innerEps}{\flip}
-%\end{scope}
+\end{tikzpicture}
 
-%\begin{scope}[yshift=-0.5cm, xshift=17cm]
-%\draw (0,0)
-  %rectangle ++(\wallHeight - 2*\innerEps,-\buildingDepth + 2*\innerEps)
-  %rectangle ++(-\wallHeight + 2*\innerEps,-\buildingWidth/2)
-  %;
-  %\begin{scope}[rotate=-90, yshift=\wallHeight - 2*\innerEps]
-  %\vflap{0}{0}{\wallHeight + 2*\innerEps}{\flip}
-  %\end{scope}
-%\end{scope}
+\newpage
+
+\begin{tikzpicture}
+  [ remember picture
+  , overlay
+  , line width=0.02cm
+  ]
+
+%%% Inner insert
+
+\begin{scope}[yshift=-0.5cm, xshift=0cm]
+\draw (0,0)
+  rectangle ++(\wallHeight - 2*\innerEps,-\buildingDepth + 2*\innerEps)
+  rectangle ++(-\wallHeight + 2*\innerEps,-\buildingWidth/2)
+  ;
+  \begin{scope}[rotate=-90, yshift=\wallHeight - 2*\innerEps]
+  \vflap{0}{0}{\wallHeight + 2*\innerEps}{\flip}
+  \end{scope}
+\end{scope}
+
+
+\begin{scope}[yshift=-0.5cm, xshift=17cm]
+\draw (0,0)
+  rectangle ++(\wallHeight - 2*\innerEps,-\buildingDepth + 2*\innerEps)
+  rectangle ++(-\wallHeight + 2*\innerEps,-\buildingWidth/2)
+  ;
+  \begin{scope}[rotate=-90, yshift=\wallHeight - 2*\innerEps]
+  \vflap{0}{0}{\wallHeight + 2*\innerEps}{\flip}
+  \end{scope}
+\end{scope}
 
 \end{tikzpicture}
 

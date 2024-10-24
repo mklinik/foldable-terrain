@@ -35,7 +35,8 @@
 
 \begin{scope}
 \vflap{0}{0}{\buildingHeight}{\flip}
-\path[draw,fill tile image*={width=\buildingDepth}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
+%\path[draw,fill tile image*={width=\buildingDepth}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
+\draw (0,0)
   rectangle ++(\buildingWidth,-\buildingHeight)
   rectangle ++(\buildingDepth,\buildingHeight)
   ;
@@ -43,7 +44,8 @@
 
 \begin{scope}[yshift=-9cm]
 \vflap{0}{0}{\buildingHeight}{\flip}
-\path[draw,fill tile image*={width=\buildingDepth}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
+%\path[draw,fill tile image*={width=\buildingDepth}{/home/mkl/sandbox/tabletop/terrain/textures/concrete/PaintedPlaster010_1K-JPG_Color.jpg}] (0,0)
+\draw (0,0)
   rectangle ++(\buildingWidth,-\buildingHeight)
   rectangle ++(\buildingDepth,\buildingHeight)
   ;
@@ -85,15 +87,18 @@
 %%%%% Roof
 
 \begin{scope}[yshift=-\buildingHeight + 2.0cm,xshift=-0.5cm]
-\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (\coverHeight,0)
+%\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (\coverHeight,0)
+\draw (\coverHeight,0)
   rectangle ++(\buildingWidth - \innerEps,-\coverHeight)
   rectangle ++(-\buildingWidth + \innerEps,-\buildingDepth + \innerEps)
   rectangle ++(\buildingWidth - \innerEps,-\coverHeight)
   ;
-\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (0, -\coverHeight)
+%\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (0, -\coverHeight)
+\draw (0, -\coverHeight)
   rectangle ++(\coverHeight,-\buildingDepth + \innerEps)
   ;
-\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (\buildingWidth + \coverHeight - \innerEps, -\coverHeight)
+%\path[draw,fill tile image*={height=8cm}{/home/mkl/sandbox/tabletop/terrain/textures/solar-panel/SolarPanel003_1K-JPG_Color.jpg}] (\buildingWidth + \coverHeight - \innerEps, -\coverHeight)
+\draw (\buildingWidth + \coverHeight - \innerEps, -\coverHeight)
   rectangle ++(\coverHeight,-\buildingDepth + \innerEps)
   ;
 \end{scope}
